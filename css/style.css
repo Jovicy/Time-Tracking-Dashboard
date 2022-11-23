@@ -1,0 +1,227 @@
+:root {
+    --Blue: hsl(246, 80%, 60%);
+    
+    --Light-red: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red-secondary: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+    
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+    --Card-hover: hsl(236, 41%, 34%);
+
+    --radius: 1.6rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--Very-dark-blue); 
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    width: 88%;
+    margin: 2rem auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2.2rem;
+}
+
+/* Menu Card */
+.menu-card {
+    background-color: var(--Dark-blue);
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.card-report {
+    background-color: var(--Blue);
+    border-radius: var(--radius);
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--radius);
+}
+
+.card-report img {
+    width: 26%;
+    max-width: 530px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.report {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.report p {
+    color: var(--Pale-Blue);
+    font-size: 1.5rem;
+}
+
+.name {
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2.5rem;
+}
+
+.menu-link {
+    color: var(--Desaturated-blue);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.menu-link:hover {
+    color: white;
+}
+
+.menu-active {
+    color: white;
+}
+
+/* Regular Card */ 
+.regular-card {
+    width: 100%;
+    border-radius: var(--radius);
+    background-repeat: no-repeat;
+    background-position: 92% -1rem;
+    cursor: pointer;
+}
+
+.property-card {
+    background-color: var(--Dark-blue);
+    margin-top: 4rem;
+    border-radius: var(--radius);
+    padding: 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.property-card:hover {
+    background-color: var(--Card-hover); 
+}
+ 
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.points{
+    cursor: pointer;
+}
+
+.point:hover {
+    fill: #fff;
+}
+
+.row-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+}
+
+.hours {
+    color: white;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.description {
+   color: var(--Pale-Blue); 
+   font-size: 1.5rem;
+}
+
+.work {
+    background-color: var(--Light-red);
+    background-image: url('../images/icon-work.svg');
+}
+.play {
+    background-color: var(--Soft-blue);
+    background-image: url('../images/icon-play.svg');
+}
+.study {
+    background-color: var(--Light-red-secondary);
+    background-image: url('../images/icon-study.svg');
+}
+.exercise {
+    background-color: var(--Lime-green);
+    background-image: url('../images/icon-exercise.svg');
+}
+.social {
+    background-color: var(--Violet);
+    background-image: url('../images/icon-social.svg');
+}
+.self-care {
+    background-color: var(--Soft-orange);
+    background-image: url('../images/icon-self-care.svg');
+}
+
+/* Tab Phones */
+@media screen and (min-width: 570px) {
+    .container {
+        display: grid;
+        grid-template-columns: 40% 40%;
+    }
+
+    .menu-card {
+        grid-column: 1/ span 2;
+    }
+
+    .card-report {
+        gap: 3rem;
+    }
+
+    .row-2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hours {
+        font-size: 3rem;
+    }
+}
